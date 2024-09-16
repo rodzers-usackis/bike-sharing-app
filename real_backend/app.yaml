@@ -1,0 +1,5 @@
+runtime: java17
+env: standard
+service: spring-backend
+entrypoint: java -jar application/target/application-0.0.1-SNAPSHOT.jar
+instance_class: F2

@@ -1,0 +1,38 @@
+.defect-report-input {
+
+}
+
+img.img-upload-thumbnail {
+    height: 200px;
+    width: fit-content;
+    margin: 10px auto;
+    border-radius: 3px;
+    float: right;
+}
+
+input[type="file" i].choose-file {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+input#file-upload-button{
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    background-color: white;
+}
+
+::-webkit-file-upload-button {
+    display: none;
+}
+
+::file-selector-button {
+    display: none;
+}
+
+input[type="file"]::before {
+    content: "Select Image";
+    display: inline-block;
+    background-color: #FF9800;
+    color: black;
+    padding: 10px;
+    border-radius: 4px;
+    margin-right: 10px;
+}

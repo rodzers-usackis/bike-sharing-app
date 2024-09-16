@@ -1,0 +1,6 @@
+rootProject.name = 'application-dev'
+include 'backend'
+include 'frontend'
+include 'real_backend'
+include 'spring_backend'
+

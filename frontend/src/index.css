@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: calc(100vh - 64px);
+  overflow: auto;
+}
+
+root {
+  height: 100vh
+}
+
+main {
+  /*min-height: 100%;*/
+  z-index: 1
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.station-info-typography {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.slot {
+  background-color: red;
+  width: 3px;
+  height: 3px
+}
+
+.nav {
+  background-color: #293241;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 0 15px 0 25px;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.nav a:active {
+  color: silver;
+}
+
+nav a:hover {
+  color: silver;
+}
+
+.nav-links {
+  padding: 0 5px 0 5px;
+}
+
+.nav span {
+  size: 48px;
+}
+
+.nav svg {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icons {
+  font-size: 36px;
+}
+
+.bottom-nav {
+  z-index: 1;
+}
+
+.appbar-paper {
+  z-index: 1;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%
+}
+
+.predictions-title {
+  display: flex;
+  justify-content: center;
+}
+
+.station-title {
+  display: flex;
+  justify-content: center;
+}
+
+.landing-page-sign-up-text {
+  display: flex;
+}
+
+.landing-page-sign-up-text a:hover {
+  cursor: pointer;
+}
+
+.landing-page-sign-up-text a {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+}
+
+.dashboard-title, .dashboard-subtitle {
+  padding-left: 32px;
+}

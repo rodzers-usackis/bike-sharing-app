@@ -1,0 +1,42 @@
+# Use this to make a local test db
+version: '3.8'
+
+services:
+  mysql_bike_db:
+    image: mysql:8.0.30
+    container_name: 'bike_db'
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'bike_test_db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3308:3306'
+    networks:
+      - backend
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: 'bike_rabbitmq'
+    environment:
+      - RABBITMQ_DEFAULT_USER=myuser
+      - RABBITMQ_DEFAULT_PASS=mypassword
+    ports:
+      - "5672:5672" #AMQP
+      - "15672:15672" #MGMT
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:15672" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - backend
+    volumes:
+      - ./rabbitmq/data/:/var/lib/rabbitmq/
+      - ./rabbitmq/log/:/var/log/rabbitmq/
+
+networks:
+  backend:
+    name: back-network
+    driver: bridge

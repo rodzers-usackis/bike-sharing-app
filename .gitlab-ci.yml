@@ -1,0 +1,18 @@
+image: maven:3.8.5-openjdk-17
+
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  script:
+    - cd ./real_backend/
+    - ./mvnw clean install -DskipTests
+
+test:
+  stage: test
+  script:
+    - cd ./real_backend/
+#    - find . -name "*Test.java" -not -path "./maintenance/src/test/java/be/kdg/prog6/maintenance/adapters/in/web/DefectReportRestControllerTest.java" -not -path "./maintenance/src/test/java/be/kdg/prog6/maintenance/adapters/mapper/DefectReportMapperTest.java" | xargs -I{} ./mvnw test -DfailIfNoTests=false
+    - ./mvnw test
